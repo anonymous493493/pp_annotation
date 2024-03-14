@@ -23,16 +23,15 @@ By fine-tuning a large-scale pre-trained ASR model, we can construct the annotat
 To alleviate the shortage of label-speech paired data for training the annotation model, we generate pseudo label-speech paired data using text-only corpora and an auxiliary TTS model. This TTS model is also trained with the existing TTS dataset.
 Experimental results show that the TTS model trained with the dataset created by the proposed annotation method can synthesize speech as naturally as the one trained with a fully-labeled dataset.
 
+
 <div align="center">
-<img src="./data/img/overview.png" width="500">
+<img src="./data/img/overview.png" width="100%">
 </div>
 
 
-# Demo
+# Audio samples (Japanese)
 
-## Audio samples (Japanese)
-
-### JSUT
+## JSUT [1]
 
 Sample 1: **"投網による漁を提案する度に、彼は反抗した。"**
 
@@ -40,12 +39,12 @@ Sample 1: **"投網による漁を提案する度に、彼は反抗した。"**
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/JSUT/Reference/BASIC5000_4770.wav"></audio> |
+| **ORACLE** | <audio controls src="data/samples/JSUT/ORACLE/BASIC5000_4770.wav"></audio> |
 | **ORACLE-WO-ACC** | <audio controls src="data/samples/JSUT/ORACLE-WO-ACC/BASIC5000_4770.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/JSUT/ASR-NLP/BASIC5000_4770.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/JSUT/GT-NLP/BASIC5000_4770.wav"></audio> |
 | **ANNT-LARGE** | <audio controls src="data/samples/JSUT/ANNT-LARGE/BASIC5000_4770.wav"></audio> |
-| **ORACLE** | <audio controls src="data/samples/JSUT/ORACLE/BASIC5000_4770.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/JSUT/Reference/BASIC5000_4770.wav"></audio> |
 
 Sample 2: **"この老舗の名物は、地元の小豆を使った月餅です。"**
 
@@ -53,14 +52,14 @@ Sample 2: **"この老舗の名物は、地元の小豆を使った月餅です�
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/JSUT/Reference/BASIC5000_4807.wav"></audio> |
+| **ORACLE** | <audio controls src="data/samples/JSUT/ORACLE/BASIC5000_4807.wav"></audio> |
 | **ORACLE-WO-ACC** | <audio controls src="data/samples/JSUT/ORACLE-WO-ACC/BASIC5000_4807.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/JSUT/ASR-NLP/BASIC5000_4807.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/JSUT/GT-NLP/BASIC5000_4807.wav"></audio> |
 | **ANNT-LARGE** | <audio controls src="data/samples/JSUT/ANNT-LARGE/BASIC5000_4807.wav"></audio> |
-| **ORACLE** | <audio controls src="data/samples/JSUT/ORACLE/BASIC5000_4807.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/JSUT/Reference/BASIC5000_4807.wav"></audio> |
 
-### JVS
+## JVS [2]
 
 Sample 1: **"しかし、作品の結末は智恵と洞察に満ちた回答というより、より、入り組んだ挫折と、混迷の荒野に、読者を連れ戻すものではなかったか。"**
 
@@ -68,13 +67,13 @@ Sample 1: **"しかし、作品の結末は智恵と洞察に満ちた回答と�
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/JVS/Reference/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 | **GT-NLP-WO-ACC** | <audio controls src="data/samples/JVS/GT-NLP-WO-ACC/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/JVS/ASR-NLP/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/JVS/GT-NLP/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
-| **ANNT-LARGE** | <audio controls src="data/samples/JVS/ANNT-LARGE/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 | **ANNT-JSUT** | <audio controls src="data/samples/JVS/ANNT-JSUT/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 | **ANNT-JSUT-TTSAUG** | <audio controls src="data/samples/JVS/ANNT-JSUT-TTSAUG/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/JVS/Reference/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
+| **ANNT-LARGE** | <audio controls src="data/samples/JVS/ANNT-LARGE/jvs009_UT-PARAPHRASE-sent273-phrase1.wav"></audio> |
 
 Sample 2: **"その後、手紙を出した相手の方々に会ったが、誰もが何食わぬ顔で、季節の挨拶をしてくれて私はほっとした。"**
 
@@ -82,15 +81,15 @@ Sample 2: **"その後、手紙を出した相手の方々に会ったが、誰�
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/JVS/Reference/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 | **GT-NLP-WO-ACC** | <audio controls src="data/samples/JVS/GT-NLP-WO-ACC/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/JVS/ASR-NLP/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/JVS/GT-NLP/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
-| **ANNT-LARGE** | <audio controls src="data/samples/JVS/ANNT-LARGE/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 | **ANNT-JSUT** | <audio controls src="data/samples/JVS/ANNT-JSUT/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 | **ANNT-JSUT-TTSAUG** | <audio controls src="data/samples/JVS/ANNT-JSUT-TTSAUG/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/JVS/Reference/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
+| **ANNT-LARGE** | <audio controls src="data/samples/JVS/ANNT-LARGE/jvs061_UT-PARAPHRASE-sent286-phrase2.wav"></audio> |
 
-### LARGE
+## LARGE
 
 Sample 1: **"スープといっしょに、にんじん、じゃがいも、たまねぎ、豚肉を、なべに入れます。"**
 
@@ -98,14 +97,14 @@ Sample 1: **"スープといっしょに、にんじん、じゃがいも、た�
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/LARGE/Reference/fisk03879.wav"></audio> |
+| **ORACLE** | <audio controls src="data/samples/LARGE/ORACLE/fisk03879.wav"></audio> |
 | **ORACLE-WO-ACC** | <audio controls src="data/samples/LARGE/ORACLE-WO-ACC/fisk03879.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/LARGE/ASR-NLP/fisk03879.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/LARGE/GT-NLP/fisk03879.wav"></audio> |
-| **ANNT-LARGE** | <audio controls src="data/samples/LARGE/ANNT-LARGE/fisk03879.wav"></audio> |
 | **ANNT-JSUT** | <audio controls src="data/samples/LARGE/ANNT-JSUT/fisk03879.wav"></audio> |
 | **ANNT-JSUT-TTSAUG** | <audio controls src="data/samples/LARGE/ANNT-JSUT-TTSAUG/fisk03879.wav"></audio> |
-| **ORACLE** | <audio controls src="data/samples/LARGE/ORACLE/fisk03879.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/LARGE/Reference/fisk03879.wav"></audio> |
+| **ANNT-LARGE** | <audio controls src="data/samples/LARGE/ANNT-LARGE/fisk03879.wav"></audio> |
 
 Sample 2: **"まあ、ここは都心にも近いし、おしゃれな街だっていうことで、若い夫婦にはすごい人気があるらしいですよ。"**
 
@@ -113,11 +112,16 @@ Sample 2: **"まあ、ここは都心にも近いし、おしゃれな街だっ�
 
 | Model            | Audio             |
 |------------------|:--------------------:|
+| **Reference** | <audio controls src="data/samples/LARGE/Reference/mksk03850.wav"></audio> |
+| **ORACLE** | <audio controls src="data/samples/LARGE/ORACLE/mksk03850.wav"></audio> |
 | **ORACLE-WO-ACC** | <audio controls src="data/samples/LARGE/ORACLE-WO-ACC/mksk03850.wav"></audio> |
 | **ASR-NLP** | <audio controls src="data/samples/LARGE/ASR-NLP/mksk03850.wav"></audio> |
 | **GT-NLP** | <audio controls src="data/samples/LARGE/GT-NLP/mksk03850.wav"></audio> |
-| **ANNT-LARGE** | <audio controls src="data/samples/LARGE/ANNT-LARGE/mksk03850.wav"></audio> |
 | **ANNT-JSUT** | <audio controls src="data/samples/LARGE/ANNT-JSUT/mksk03850.wav"></audio> |
 | **ANNT-JSUT-TTSAUG** | <audio controls src="data/samples/LARGE/ANNT-JSUT-TTSAUG/mksk03850.wav"></audio> |
-| **ORACLE** | <audio controls src="data/samples/LARGE/ORACLE/mksk03850.wav"></audio> |
-| **Reference** | <audio controls src="data/samples/LARGE/Reference/mksk03850.wav"></audio> |
+| **ANNT-LARGE** | <audio controls src="data/samples/LARGE/ANNT-LARGE/mksk03850.wav"></audio> |
+
+
+# References
+- [1]: Ryosuke Sonobe, Shinnosuke Takamichi and Hiroshi Saruwatari,  "JSUT corpus: free large-scale Japanese speech corpus for end-to-end speech synthesis," arXiv preprint, 1711.00354, 2017.
+- [2]: Shinnosuke Takamichi, Kentaro Mitsui, Yuki Saito, Tomoki Koriyama, Naoko Tanji, and Hiroshi Saruwatari, "JVS corpus: free Japanese multi-speaker voice corpus," arXiv preprint, 1908.06248, Aug. 2019.
